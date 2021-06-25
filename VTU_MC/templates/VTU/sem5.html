@@ -1,0 +1,230 @@
+{% extends 'VTU/basic.html' %}
+{% block title%} Home{% endblock %}
+
+{% block body %}
+
+<!--<form class="mx-2" name="gp_n_cr">-->
+<form class="mx-2" method="post" action="/sem5/">{% csrf_token %}
+    <div class="row my-2">
+        <div class="col">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name">
+        </div>
+        <div class="col">
+            <label for="usn">USN</label>
+            <input type="text" class="form-control" name="usn" id="usn">
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-6 col-6">
+            <input type="text" readonly class="form-control-plaintext" value="Subject" disabled>
+        </div>
+        <!--        <div class="col">-->
+        <!--            <input type="text" readonly class="form-control-plaintext" value="Marks" disabled>-->
+        <!--        </div>-->
+        <div class="col-2" style="padding:1px">
+            <input type="text" readonly class="form-control-plaintext" value="Internal Marks" disabled>
+        </div>
+        <div class="col-2" style="padding:1px">
+            <input type="text" readonly class="form-control-plaintext" value="External Marks" disabled>
+        </div>
+        <div class="col-2">
+            <input type="text" readonly class="form-control-plaintext" value="P/F" disabled>
+        </div>
+    </div>
+    </div>
+    <!--                BELOW-->
+    <span name="numbr">
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="mg" class="form-control"
+                         placeholder="MGMT. AND ENTREPRENEURSHIP FOR IT INDUSTRY"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="mgI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="mgE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                     <select id="mgP" name="mgP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                     </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="in" class="form-control" placeholder="INTRODUCTION TO SOFTWARE TESTING"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="inI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="inE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                     <select id="inP" name="inP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                     </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="co" class="form-control" placeholder="COMPUTER NETWORKS"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="coI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="coE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="coP" name="coP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="da" class="form-control" placeholder="DATABASE MANAGEMENT SYSTEM" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="daI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="daE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="daP" name="daP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="dn" class="form-control"
+                         placeholder=".NET FRAMEWORK FOR APPLICATION DEVELOPMENT" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dnI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dnE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="dnP" name="dnP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="au" class="form-control" placeholder="AUTOMATA THEORY AND COMPUTABILITY"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="auI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="auE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="auP" name="auP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="cm" class="form-control"
+                         placeholder="COMPUTER NETWORK LABORATORY" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="cmI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="cmE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="cmP" name="cmP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="db" class="form-control" placeholder="DBMS LABORATORY WITH MINI PROJECT"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dbI" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dbE" class="form-control" placeholder="Marks">
+                </div>
+                <div class="col-2 my-2">
+                  <select id="dbP" name="dbP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+    </span>
+    <ul>
+        <li><p>Fill ALL the fields</p></li>
+    </ul>
+    <button type="submit" class="btn btn-dark">Proceed</button>
+</form>
+
+{% endblock %}
+
+{% block js %}
+<script>
+
+
+    {% if namesem %}
+<!--        var mail = "{{mail}}"-->
+<!--        localStorage.setItem('mail', JSON.stringify(mail));-->
+<!--        alert('Login Successful!')-->
+        document.location = "/download/{{namesem}}.html";
+<!--    {% elif login == False %}-->
+<!--        alert('Invalid Credentials!')-->
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}

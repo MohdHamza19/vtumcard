@@ -1,0 +1,233 @@
+{% extends 'VTU/basic.html' %}
+{% block title%} Home{% endblock %}
+
+{% block body %}
+
+<!--<form class="mx-2" name="gp_n_cr">-->
+<form class="mx-2" method="post" action="/sem3/">{% csrf_token %}
+    <div class="row my-2">
+        <div class="col">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name">
+        </div>
+        <div class="col">
+            <label for="usn">USN</label>
+            <input type="text" class="form-control" name="usn" id="usn">
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-md-6 col-6">
+            <input type="text" readonly class="form-control-plaintext" value="Subject" disabled>
+        </div>
+        <div class="col-2" style="padding:1px">
+            <input type="text" readonly class="form-control-plaintext" value="Internal Marks" disabled>
+        </div>
+        <div class="col-2" style="padding:1px">
+            <input type="text" readonly class="form-control-plaintext" value="External Marks" disabled>
+        </div>
+        <div class="col-2">
+            <input type="text" readonly class="form-control-plaintext" value="P/F" disabled>
+        </div>
+    </div>
+    </div>
+    <!--                BELOW-->
+    <span name="numbr">
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="en" class="form-control" placeholder="ENGINEERING MATHEMATICS - III"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="enI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="enE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                     <select id="enP" name="enP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                     </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="an" class="form-control" placeholder="ANALOG AND DIGITAL ELECTRONICS"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="anI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="anE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                     <select id="anP" name="anP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                     </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="da" class="form-control" placeholder="DATA STRUCTURES AND APPLICATION"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="daI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="daE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="daP" name="daP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="co" class="form-control" placeholder="COMPUTER ORGANIZATION" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="coI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="coE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="coP" name="coP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="un" class="form-control" placeholder="UNIX AND SHELL PROGRAMMING" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="unI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="unE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="unP" name="unP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="di" class="form-control" placeholder="DISCRETE MATHEMATICAL STRUCTURES"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="diI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="diE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="diP" name="diP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="anl" class="form-control"
+                         placeholder="ANALOG AND DIGITAL ELECTRONICS LABORATORY" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="anlI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="anlE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="anlP" name="anlP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="dal" class="form-control" placeholder="DATA STRUCTURES LABORATORY"
+                         disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dalI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="dalE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="dalP" name="dalP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row my-2">
+                <div class="col-md-6 col-6">
+                  <input type="number" name="ka" class="form-control" placeholder="KANNADA KALI" disabled>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="kaI" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2" style="padding:1px">
+                  <input type="number" name="kaE" class="form-control" placeholder="Marks" required>
+                </div>
+                <div class="col-2 my-2">
+                  <select id="kaP" name="kaP">
+                        <option value="P">Pass</option>
+                        <option value="F">Fail</option>
+                  </select>
+                </div>
+              </div>
+    </span>
+    <ul>
+        <li><p>Fill ALL the fields</p></li>
+    </ul>
+    <button type="submit" class="btn btn-dark">Proceed</button>
+</form>
+
+{% endblock %}
+
+{% block js %}
+<script>
+
+
+    {% if namesem %}
+<!--        var mail = "{{mail}}"-->
+<!--        localStorage.setItem('mail', JSON.stringify(mail));-->
+<!--        alert('Login Successful!')-->
+        document.location = "/download/{{namesem}}.html";
+<!--    {% elif login == False %}-->
+<!--        alert('Invalid Credentials!')-->
+    {% endif %}
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}

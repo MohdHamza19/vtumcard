@@ -1,0 +1,41 @@
+{% extends 'VTU/basic.html' %}
+{% block title%} Download{% endblock %}
+
+{% block css2 %}
+.card {
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+border-radius: 5px;
+}
+
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+transform: scale(1.03);
+}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 d-flex justify-content-center my-4">
+            <div class="card" style="width: 18rem;">
+                <a href="http://127.0.0.1:8000/sem3/">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align:center">Semester 3</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center my-4">
+            <div class="card" style="width: 18rem;">
+                <a href="http://127.0.0.1:8000/sem5/">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align:center">Semester 5</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
